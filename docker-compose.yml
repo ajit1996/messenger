@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  messengermongo:
+    image: mongo:latest
+    container_name: messengermongo
+    ports:
+      - 27017:27017
+  messengerapplication:
+    build: .
+    container_name: messengerapplication
+    ports:
+      - 8080:8080
+    depends_on:
+      - messengermongo
+    links:
+      - messengermongo

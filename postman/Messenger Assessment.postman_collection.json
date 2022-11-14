@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "7bdd7c3a-a8d2-4493-9342-1601eb4453a2",
+		"name": "Messenger Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24195595"
+	},
+	"item": [
+		{
+			"name": "Post Message",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "anuja",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"topic\": \"AJIT BOOK\",\n    \"message_id\" : 43221,\n    \"content\": \"SOME\",\n    \"created_on\": \"2022-11-15T01:19:30.99\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/assesment/v1/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v1",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Messages",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ajit",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assesment/v1/message?size=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v1",
+						"message"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Messages By Topic",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ajit",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assesment/v1/message?topic=Naruto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v1",
+						"message"
+					],
+					"query": [
+						{
+							"key": "topic",
+							"value": "Naruto"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Messages By User ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ajit",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assesment/v2/message?user_id=ajit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v2",
+						"message"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "ajit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Message By ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ajit",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assesment/v1/message/4321",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v1",
+						"message",
+						"4321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Message By ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ajit",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass143",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/assesment/v1/message/4321",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assesment",
+						"v1",
+						"message",
+						"4321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"anuja\",\n    \"password\" : \"pass143\",\n    \"role\" : \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,8 @@
+spring:
+  main:
+    web-application-type: reactive
+  data:
+    mongodb:
+      host: messengermongo
+      port: 27017
+      database: messenger
