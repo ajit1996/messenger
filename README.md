@@ -1,6 +1,7 @@
 # Messenger
 
 > Steps to Run Application :
+- We need Java version 11 installed and set as default version to run this application , Otherwise we can change Java version to JAVA 8 in pom.xml
 - Application will be running on port 8080
 - Postman collection is present under project repo itself. It can be found under directory called postman
 - Run below commands in sequence from project directory 
